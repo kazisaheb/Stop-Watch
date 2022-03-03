@@ -1,4 +1,7 @@
 /** @format */
+body {
+	background-color: bisque;
+}
 h1 {
 	background-color: gray;
 	color: white;
@@ -8,7 +11,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	row-gap: 15px;
+	row-gap: 50px;
 }
 
 #topBtn button {
@@ -16,16 +19,30 @@ section {
 	height: 50px;
 	font-size: 30px;
 }
-#btmBtn button {
-	width: 100px;
-	height: 50px;
+
+#startBtn,
+#stopBtn {
 	font-size: 30px;
-}
-#start {
-	background-color: green;
+	font-weight: bold;
 	color: white;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	border: 5px solid white;
+	outline: 5px solid gray;
+	cursor: pointer;
 }
-#stop {
-	background-color: red;
-	color: white;
+
+#startBtn {
+	background-image: radial-gradient(green, rgb(0, 255, 0));
+}
+#startBtn:hover {
+	background-image: radial-gradient(rgb(0, 167, 0), green);
+}
+#stopBtn {
+	background-image: radial-gradient(rgb(138, 0, 0), red);
+	display: none;
+}
+#stopBtn:hover {
+	background-image: radial-gradient(red, rgb(138, 0, 0));
 }

@@ -1,10 +1,12 @@
 minutes = document.getElementById('minutes')
 seconds = document.getElementById('seconds')
 milisec = document.getElementById('milisec')
-start = document.getElementById('start')
+startBtn = document.getElementById('startBtn')
+stopBtn = document.getElementById('stopBtn')
 
 stopWatch = () => {
-  start.setAttribute("disabled", true)
+  startBtn.style.display = 'none'
+  stopBtn.style.display = 'block'
   minutes.innerText = 00
   seconds.innerText = 00
   milisec.innerText = 00
@@ -26,6 +28,7 @@ stopWatch = () => {
 }
 stop = () => {
   clearInterval(watch)
-  start.removeAttribute("disabled")
+  startBtn.style.display = 'block'
+  stopBtn.style.display = 'none'
 }
 
