@@ -2,7 +2,9 @@ minutes = document.getElementById('minutes')
 seconds = document.getElementById('seconds')
 milisec = document.getElementById('milisec')
 
-restart = () => {
+start = () => {
+  document.getElementById('start').setAttribute("disabled", true)
+
   count = 0
   watch = setInterval(() => {
     milisec.innerText = count++
@@ -12,4 +14,8 @@ restart = () => {
     , 100
   )
 }
-stop = () => clearInterval(watch)
+stop = () => {
+  clearInterval(watch)
+  document.getElementById('start').removeAttribute("disabled")
+}
+
