@@ -46,3 +46,7 @@ section {
 #stopBtn:hover {
 	background-image: radial-gradient(red, rgb(138, 0, 0));
 }
+#leap button {
+	width: 40px;
+	height: 20px;
+}

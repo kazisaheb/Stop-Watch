@@ -32,3 +32,10 @@ stop = () => {
   stopBtn.style.display = 'none'
 }
 
+leap = () => {
+  leapDiv = document.getElementById('leap')
+  topBtn = document.getElementById('topBtn')
+  div = document.createElement('div')
+  div.innerHTML = 'Leap = ' + topBtn.innerHTML
+  leapDiv.append(div)
+}
