@@ -4,7 +4,7 @@ milisec = document.getElementById('milisec')
 startBtn = document.getElementById('startBtn')
 stopBtn = document.getElementById('stopBtn')
 
-stopWatch = () => {
+start = () => {
   startBtn.style.display = 'none'
   stopBtn.style.display = 'block'
   minutes.innerText = 0
@@ -32,10 +32,12 @@ stop = () => {
   stopBtn.style.display = 'none'
 }
 
+setInterval(() => document.getElementById('time').innerText = new Date().toLocaleTimeString(), 1000)
+
 leap = () => {
   leapDiv = document.getElementById('leap')
   topBtn = document.getElementById('topBtn')
   div = document.createElement('div')
-  div.innerHTML = 'Leap = ' + topBtn.innerHTML
+  div.innerHTML = 'Lap = ' + topBtn.innerHTML
   leapDiv.append(div)
 }
